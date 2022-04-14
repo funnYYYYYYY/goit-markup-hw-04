@@ -175,6 +175,14 @@ img {
   letter-spacing: 0.03em;
 }
 
+.envelope-icon {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
 .button:hover,
 .button:focus {
   color: #ffffff;
@@ -191,7 +199,9 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: rgba(47, 48, 58, 1);
+  background-size: auto;
 }
+
 
 .primary-title {
   text-align: center;

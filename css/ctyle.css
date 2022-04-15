@@ -136,6 +136,10 @@ img {
   margin-right: 50px;
 }
 
+/* .nav-item {
+  display: flex;
+} */
+
 .nav-link,
 .header-other-nav {
   color: var(--second-text-color);
@@ -154,9 +158,18 @@ img {
 
 .nav-link,
 .header-other-nav {
-  display: block;
+  align-items: center;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.header-svg {
+  margin-right: 10px;
+}
+
+.header-svg-envelope:focus {
+  fill: #188ce8;
 }
 
 /* Button */
@@ -196,12 +209,11 @@ img {
 /* Section 1 */
 
 .primary {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-color: rgba(47, 48, 58, 1);
-  background-size: auto;
+  background-color: var(--second-background-color);
+  background-image: url(../images/bcg-fon.jpg);
+  max-width: 1600px;
+  margin: 0 auto;
 }
-
 
 .primary-title {
   text-align: center;
@@ -247,11 +259,26 @@ img {
   margin-right: var(--margin-right);
 } */
 
+/* .benefits-icon:hover,
+.benefits-icon:focus {
+  stroke: #2196f3;
+} */
+
 .benefits-item:not(:last-child) {
   margin-right: 30px;
 }
 
+.container-sections-two {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  align-items: center;
+  justify-content: center;
+}
+
 .benefits-company {
+  padding-top: 30px;
   margin-bottom: 10px;
   color: var(--second-text-color);
   font-weight: 700;
@@ -299,8 +326,40 @@ img {
 }
 
 /* Section 4 */
+
 .about {
   background-color: var(--third-background-color);
+}
+
+.social-media {
+  display: flex;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.social-media-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  color: #afb1b8;
+}
+
+.social-svg {
+  fill: #afb1b8;
+}
+
+.social-media-icon:focus,
+.social-media-icon:hover {
+  background-color: var(--accent-text-color);
+}
+
+.social-media-icon:hover .social-svg {
+  fill: var(--background-color);
 }
 
 .about-content {
@@ -392,6 +451,41 @@ img {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+}
+
+/* Section 5 */
+
+.clients {
+  margin: 0 auto;
+}
+
+.regular-clients {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+.logo-company {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo-company-icon {
+  width: 170px;
+  height: 92px;
+  border-right: 1px solid #afb1b8;
+  border-top: 1px solid #afb1b8;
+  border-bottom: 1px solid #afb1b8;
+  border-left: 1px solid #afb1b8;
+  margin-top: 50px;
+  border-radius: 4px;
+}
+
+.logo-company-icon:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* Footer */

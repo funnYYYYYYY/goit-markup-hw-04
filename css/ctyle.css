@@ -13,6 +13,8 @@
   --other-text-color: #ffffff;
   --accent-text-color: #2196f3;
   --third-background-color: #f5f4fa;
+  --color-svg: #afb1b8;
+  --bcg-footer-icon: rgba(255, 255, 255, 0.1);
   --padding-top: 94px;
   --padding-bottom: 94px;
   --margin-right: 30px;
@@ -53,6 +55,7 @@ body {
 .footer-accent-color:hover,
 .footer-accent-color:focus {
   color: var(--accent-text-color);
+  fill: var(--accent-text-color);
 }
 
 p,
@@ -175,6 +178,7 @@ img {
 /* Button */
 
 .button {
+  border-radius: 4px;
   background: var(--third-background-color);
   padding: 6px 22px;
   display: block;
@@ -272,7 +276,7 @@ img {
   display: flex;
   width: 270px;
   height: 120px;
-  background-color: #f5f4fa;
+  background-color: var(--third-background-color);
   align-items: center;
   justify-content: center;
 }
@@ -350,7 +354,7 @@ img {
 }
 
 .social-svg {
-  fill: #afb1b8;
+  fill: var(--color-svg);
 }
 
 .social-media-icon:focus,
@@ -367,6 +371,8 @@ img {
 }
 
 .about-people {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   background-color: rgba(245, 244, 250, 1);
   border-radius: 0px 0px 4px 4px;
@@ -395,6 +401,57 @@ img {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+}
+
+/* -----------------------Section 5----------------------- */
+
+.clients {
+  margin: 0 auto;
+}
+
+.regular-clients {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+.logo-company {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo-company-icon {
+  cursor: pointer;
+  width: 170px;
+  height: 92px;
+  border-right: 1px solid var(--color-svg);
+  border-top: 1px solid var(--color-svg);
+  border-bottom: 1px solid var(--color-svg);
+  border-left: 1px solid var(--color-svg);
+  border-radius: 4px;
+  fill: var(--accent-text-color);
+}
+
+.logo-company-svg {
+  width: 106px;
+  height: 60px;
+  margin: 16px 32px;
+  fill: currentColor;
+
+  /* outline: 1px solid green; */
+}
+
+.logo-company-icon:not(:last-child) {
+  margin-right: 30px;
+}
+
+.logo-company-icon:focus,
+.logo-company-icon:hover {
+  color: var(--accent-text-color);
+  border-color: var(--accent-text-color);
 }
 
 /* Portfolio */
@@ -431,10 +488,17 @@ img {
 }
 
 .main-informations {
+  cursor: pointer;
   width: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-bottom: 30px;
   /* flex-shrink: 1; */
+}
+
+.main-informations:hover,
+.main-informations:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .product-text {
@@ -451,41 +515,6 @@ img {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-}
-
-/* Section 5 */
-
-.clients {
-  margin: 0 auto;
-}
-
-.regular-clients {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-}
-
-.logo-company {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.logo-company-icon {
-  width: 170px;
-  height: 92px;
-  border-right: 1px solid #afb1b8;
-  border-top: 1px solid #afb1b8;
-  border-bottom: 1px solid #afb1b8;
-  border-left: 1px solid #afb1b8;
-  margin-top: 50px;
-  border-radius: 4px;
-}
-
-.logo-company-icon:not(:last-child) {
-  margin-right: 30px;
 }
 
 /* Footer */
@@ -530,4 +559,60 @@ img {
   display: block;
   color: var(--others-text-color);
   font-style: normal;
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--other-text-color);
+}
+
+/* .information .container {
+  display: flex;
+} */
+
+.footer-list {
+  display: flex;
+}
+
+.fotter-svg-list {
+  margin-top: 20px;
+  cursor: pointer;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--bcg-footer-icon);
+}
+
+.footer-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.footer-svg-icon {
+  fill: var(--background-color);
+}
+
+.fotter-svg-list:hover,
+.fotter-svg-list:focus {
+  background-color: var(--accent-text-color);
+}
+
+.fotter-svg-list + .fotter-svg-list {
+  margin-left: 10px;
+}
+
+.information .container {
+  display: flex;
+}
+
+.container-footer {
+  margin-top: 12px;
+  margin-left: 70px;
 }

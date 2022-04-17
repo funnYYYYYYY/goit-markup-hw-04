@@ -168,10 +168,6 @@ img {
   fill: currentColor;
 }
 
-.header-svg-envelope:focus {
-  fill: #188ce8;
-}
-
 /* Button */
 
 .button {
@@ -638,3 +634,31 @@ img {
 .container-footer {
   margin-left: 70px;
 }
+
+/* -----------------Test_____________
+
+.benefits-item::before {
+  content: "";
+  display: block;
+  width: 270px;
+  height: 120px;
+  background-color: var(--third-background-color);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.benefits-item:nth-child(1)::before {
+  background-image: url(../images/1.svg);
+}
+
+.benefits-item:nth-child(2)::before {
+  background-image: url(../images/2.svg);
+}
+
+.benefits-item:nth-child(3)::before {
+  background-image: url(../images/3.svg);
+}
+
+.benefits-item:nth-child(4)::before {
+  background-image: url(../images/4.svg);
+} */

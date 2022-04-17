@@ -139,10 +139,6 @@ img {
   margin-right: 50px;
 }
 
-/* .nav-item {
-  display: flex;
-} */
-
 .nav-link,
 .header-other-nav {
   color: var(--second-text-color);
@@ -169,6 +165,7 @@ img {
 
 .header-svg {
   margin-right: 10px;
+  fill: currentColor;
 }
 
 .header-svg-envelope:focus {
@@ -190,6 +187,7 @@ img {
   line-height: 1.63;
   text-align: center;
   letter-spacing: 0.03em;
+  border: none;
 }
 
 .envelope-icon {
@@ -204,6 +202,8 @@ img {
 .button:focus {
   color: #ffffff;
   background-color: var(--accent-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* .current-button {
@@ -217,6 +217,8 @@ img {
   background-image: url(../images/bcg-fon.jpg);
   max-width: 1600px;
   margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .primary-title {
@@ -349,8 +351,19 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
   color: #afb1b8;
+}
+
+.social-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-icon:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-svg {
@@ -418,13 +431,17 @@ img {
   color: #212121;
 }
 
+.link-logo-company {
+  fill: var(--color-svg);
+}
+
 .logo-company {
   display: flex;
   flex-wrap: wrap;
 }
 
 .logo-company-icon {
-  cursor: pointer;
+  display: flex;
   width: 170px;
   height: 92px;
   border-right: 1px solid var(--color-svg);
@@ -432,16 +449,14 @@ img {
   border-bottom: 1px solid var(--color-svg);
   border-left: 1px solid var(--color-svg);
   border-radius: 4px;
-  fill: var(--accent-text-color);
 }
 
 .logo-company-svg {
+  display: flex;
   width: 106px;
   height: 60px;
   margin: 16px 32px;
-  fill: currentColor;
-
-  /* outline: 1px solid green; */
+  fill: var(--color-svg);
 }
 
 .logo-company-icon:not(:last-child) {
@@ -450,8 +465,12 @@ img {
 
 .logo-company-icon:focus,
 .logo-company-icon:hover {
-  color: var(--accent-text-color);
   border-color: var(--accent-text-color);
+}
+
+.logo-company-icon:focus .logo-company-svg,
+.logo-company-icon:hover .logo-company-svg {
+  fill: var(--accent-text-color);
 }
 
 /* Portfolio */
@@ -570,16 +589,16 @@ img {
   color: var(--other-text-color);
 }
 
-/* .information .container {
+.information .container {
   display: flex;
-} */
+  align-items: baseline;
+}
 
 .footer-list {
   display: flex;
 }
 
 .fotter-svg-list {
-  margin-top: 20px;
   cursor: pointer;
   display: flex;
   width: 44px;
@@ -588,11 +607,15 @@ img {
   background-color: var(--bcg-footer-icon);
 }
 
+.footer-list {
+  margin-top: 20px;
+}
+
 .footer-soc-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  flex-grow: 1;
 }
 
 .footer-svg-icon {
@@ -613,6 +636,5 @@ img {
 }
 
 .container-footer {
-  margin-top: 12px;
   margin-left: 70px;
 }

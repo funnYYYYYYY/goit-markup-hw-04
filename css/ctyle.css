@@ -654,6 +654,9 @@ img {
   margin-top: 9px;
 }
 
+.informations-available {
+}
+
 /* .informations-available {
   margin-top: 9px;
 } */
@@ -663,6 +666,8 @@ img {
   display: block;
   color: var(--others-text-color);
   font-style: normal;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-title {

@@ -840,6 +840,7 @@ img {
   right: 0;
   background-color: var(--background-color);
   border: 1px solid var(--primary-text-color);
+  cursor: pointer;
 
   margin-top: 8px;
   margin-right: 8px;
